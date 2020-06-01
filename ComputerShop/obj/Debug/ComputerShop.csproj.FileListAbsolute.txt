@@ -7,3 +7,8 @@ D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.csproj.Generate
 D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.csproj.CoreCompileInputs.cache
 D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.exe
 D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.pdb
+D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Form1.resources
+D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Form2.resources
+D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Form3.resources
+D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Cashier.resources
+D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.WarehouseEmployee.resources
