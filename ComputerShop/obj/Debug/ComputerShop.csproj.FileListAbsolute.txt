@@ -1,0 +1,9 @@
+D:\ComputerShop\ComputerShop\ComputerShop\bin\Debug\ComputerShop.exe.config
+D:\ComputerShop\ComputerShop\ComputerShop\bin\Debug\ComputerShop.exe
+D:\ComputerShop\ComputerShop\ComputerShop\bin\Debug\ComputerShop.pdb
+D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.csprojAssemblyReference.cache
+D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Properties.Resources.resources
+D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.csproj.GenerateResource.cache
+D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.csproj.CoreCompileInputs.cache
+D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.exe
+D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.pdb
