@@ -15,47 +15,31 @@ namespace ComputerShop
     public partial class Form3 : Form
     {
         Random random = new Random();
-        Order order;
-        Form2 f = new Form2();
-        public Form3(int prodPrice)
+        Order order = new Order();
+        int productPrice = 0;
+        float coef = 0;
+        SaveAndLoadFile file = new SaveAndLoadFile();
+        string dir = @"C:\Users\valduane\Desktop\orders.txt";
+        public Form3(int prodPrice, string curProd)
         {
             InitializeComponent();
             string text = "ID заказа: ";
             int id = random.Next(1000);
             information.Text = text + id;
-
-            order = new Order();
+            productPrice = prodPrice;
             order.orderID = id;
-            order.orderPrice = f.GetPrice();
-
-            price.Text = "Общая стоимость: " + order.orderPrice;
+            order.orderPrice = prodPrice;
+            order.prodName = curProd;
+            showPrice();
         }
-
         private void information_Click(object sender, EventArgs e)
         {
             
         }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox2_CheckedChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form3_Load(object sender, EventArgs e)
         {
 
@@ -63,7 +47,45 @@ namespace ComputerShop
 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
+            if (!checkBox1.Checked)
+            {
+                order.orderPrice = order.orderPrice - 500;
+            }
+            else if(checkBox1.Checked)
+            {
+                order.orderPrice = order.orderPrice + 500;
+            }
+            showPrice();
+        }
 
+        private void price_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void checkBox2_CheckedChanged_2(object sender, EventArgs e)
+        {
+            coef = 0.2f * productPrice;
+            if (!checkBox2.Checked)
+            {
+                order.orderPrice = order.orderPrice - coef;
+            }
+            else if (checkBox2.Checked)
+            {
+                order.orderPrice = order.orderPrice + coef;
+            }
+            showPrice();
+        }
+
+        private void showPrice()
+        {
+            price.Text = "Общая стоимость: " + order.orderPrice;
+        }
+
+        private void orderFinaly_Click(object sender, EventArgs e)
+        {
+            order.status = true;
+            file.SaveToFile(dir, order);
         }
     }
 }

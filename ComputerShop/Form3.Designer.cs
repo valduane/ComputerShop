@@ -34,6 +34,7 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.price = new System.Windows.Forms.Label();
+            this.orderFinaly = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +74,7 @@
             this.flowLayoutPanel1.Controls.Add(this.checkBox1);
             this.flowLayoutPanel1.Controls.Add(this.checkBox2);
             this.flowLayoutPanel1.Controls.Add(this.price);
+            this.flowLayoutPanel1.Controls.Add(this.orderFinaly);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(417, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(409, 469);
@@ -102,16 +104,30 @@
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "Гарантия";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged_2);
             // 
             // price
             // 
             this.price.AutoSize = true;
-            this.price.Font = new System.Drawing.Font("Nirmala UI", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price.Location = new System.Drawing.Point(3, 85);
+            this.flowLayoutPanel1.SetFlowBreak(this.price, true);
+            this.price.Font = new System.Drawing.Font("Nirmala UI", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price.Location = new System.Drawing.Point(3, 80);
             this.price.Name = "price";
-            this.price.Size = new System.Drawing.Size(110, 45);
+            this.price.Size = new System.Drawing.Size(96, 37);
             this.price.TabIndex = 2;
             this.price.Text = "label1";
+            this.price.Click += new System.EventHandler(this.price_Click);
+            // 
+            // orderFinaly
+            // 
+            this.orderFinaly.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.orderFinaly.Location = new System.Drawing.Point(3, 120);
+            this.orderFinaly.Name = "orderFinaly";
+            this.orderFinaly.Size = new System.Drawing.Size(406, 75);
+            this.orderFinaly.TabIndex = 3;
+            this.orderFinaly.Text = "ЗАКАЗАТЬ";
+            this.orderFinaly.UseVisualStyleBackColor = true;
+            this.orderFinaly.Click += new System.EventHandler(this.orderFinaly_Click);
             // 
             // Form3
             // 
@@ -138,5 +154,6 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label price;
+        private System.Windows.Forms.Button orderFinaly;
     }
 }

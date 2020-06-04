@@ -16,12 +16,15 @@ namespace ComputerShop
         public int vacuumCount = 0;
         public int phonesCount = 0;
         public int headphonesCount = 0;
+        private string amount = "";
 
         Product vacuum = new Product();
         Product phone = new Product();
         Product headphone = new Product();
 
-        
+        SaveAndLoadFile file = new SaveAndLoadFile();
+
+        string dirOfAmount = @"C:\Users\valduane\Desktop\amountOfProduct.txt";
         public Form1()
         {
             InitializeComponent();
@@ -44,6 +47,8 @@ namespace ComputerShop
             headphone.name = "Наушники беспроводные TCL ELIT400BT";
             headphone.price = 5500;
             headphone.amount = headphonesCount;
+
+            readFromFile();
         }
 
         public Product GetVacuumObj()
@@ -70,6 +75,7 @@ namespace ComputerShop
         {
             return headphone.price;
         }
+
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -127,8 +133,10 @@ namespace ComputerShop
         private void flowLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }     
+        private void readFromFile()
+        {
+            amount = file.ReadFromFile(dirOfAmount);
         }
-
-        
     }
 }

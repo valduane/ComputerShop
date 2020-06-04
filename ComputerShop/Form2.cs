@@ -19,32 +19,10 @@ namespace ComputerShop
         {
             InitializeComponent();
         }
-
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void getText()
-        {
-
-        }
-
         private void vacuum_Click(object sender, EventArgs e)
         {
             string text = "Вертикальный пылесос STARWIND SCH1010 имеет достаточно мощный двигатель - 800 Ватт и поможет за очень короткое время убрать в вашей квартире или рабочем помещении. При необходимости, он легко трансформируется в ручную модель и прекрасно подойдет не только для уборки пола, но и поможет очистить мебель. Благодаря небольшому весу и тщательно сбалансированной конструкции, прибором очень удобно пользоваться, а возможность вертикального хранения избавит от необходимости лишний раз нагибаться. Использование пылесоса не требует покупки дополнительных мешков, поскольку в его комплектацию входит специальный контейнер для пыли, емкостью 0,8 литров. Модель оснащена моющимся фильтром. Устройство работает от сети 220 В. Длинный шнур, 4,5 метра, позволит достать в самые труднодоступные участки помещения. В набор вертикального пылесоса входит одна основная насадка - щетка для пола. Прибор предназначен для сухой чистки и может быть использован как домашних условиях, так и в офисе. Цена - 1999 руб.";
@@ -88,7 +66,7 @@ namespace ComputerShop
         }
         private void order_Click(object sender, EventArgs e)
         {
-            Form3 f = new Form3(currentPrice);
+            Form3 f = new Form3(currentPrice, currentProduct);
             f.ShowDialog();
         }
 

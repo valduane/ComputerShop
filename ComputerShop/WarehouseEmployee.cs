@@ -14,6 +14,9 @@ namespace ComputerShop
     {
         string currentProduct;
         string text;
+        string textToWriteFile;
+        string dir = @"C:\Users\valduane\Desktop\amountOfProduct.txt";
+        SaveAndLoadFile file = new SaveAndLoadFile();
         Form1 f = new Form1();
         Product vacuumProd;
         Product phoneProd;
@@ -65,7 +68,8 @@ namespace ComputerShop
             {
                 headphoneProd.amount++;
             }
-            
+            textToWriteFile = vacuumProd.amount + "\n" + phoneProd.amount + "\n" + headphoneProd.amount;
+            file.SaveToFile(dir, textToWriteFile);
         }
 
         private void dec_Click(object sender, EventArgs e)

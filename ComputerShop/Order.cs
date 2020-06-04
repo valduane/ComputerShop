@@ -8,8 +8,9 @@ namespace ComputerShop
 {
     class Order
     {
+        public string prodName = " ";
         public int orderID = 0;
         public bool status = false;
-        public int orderPrice = 0;
+        public float orderPrice = 0;
     }
 }
