@@ -68,7 +68,7 @@ namespace ComputerShop
             {
                 headphoneProd.amount++;
             }
-            textToWriteFile = vacuumProd.amount + "\n" + phoneProd.amount + "\n" + headphoneProd.amount;
+            textToWriteFile = vacuumProd.amount + " " + phoneProd.amount + " " + headphoneProd.amount;
             file.SaveToFile(dir, textToWriteFile);
         }
 

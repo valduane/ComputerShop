@@ -16,7 +16,7 @@ namespace ComputerShop
         public int vacuumCount = 0;
         public int phonesCount = 0;
         public int headphonesCount = 0;
-        private string amount = "";
+        private int[] amount = new int[3];
 
         Product vacuum = new Product();
         Product phone = new Product();
@@ -135,8 +135,12 @@ namespace ComputerShop
 
         }     
         private void readFromFile()
-        {
+        { 
             amount = file.ReadFromFile(dirOfAmount);
+
+            vacuum.amount = amount[0];
+            phone.amount = amount[1];
+            headphone.amount = amount[2];
         }
     }
 }

@@ -34,8 +34,8 @@ namespace ComputerShop
             {
                 using (StreamWriter sw = new StreamWriter(dir, false, System.Text.Encoding.Default))
                 {
-                    sw.WriteLine(text);
-                    sw.WriteLine("\n");
+                    sw.Write(text);
+
                 }
             }
             catch (Exception e)
@@ -44,26 +44,24 @@ namespace ComputerShop
             }
         }
 
-        public string ReadFromFile(string dir)
+        public int[] ReadFromFile(string dir)
         {
             string line = "";
+            int a = 0;
+            int[] array = new int [3];
             try
             {
                 using (StreamReader sr = new StreamReader(dir))
                 {
-                    
-                    while ((line = sr.ReadLine()) != null)
-                    {
-                        
-                    }
-                    
+                    line = sr.ReadLine();
+                    array = line.Split(' ').Select(Int32.Parse).ToArray();
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
-            return line;
+            return array;
         }
     }
 }
