@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace ComputerShop
 {
@@ -117,7 +119,8 @@ namespace ComputerShop
 
         private void Leadership_Click(object sender, EventArgs e)
         {
-            
+            LeadrshipForm f = new LeadrshipForm();
+            openNewForm(f);
         }
 
         private void openNewForm(Form f)
@@ -135,12 +138,15 @@ namespace ComputerShop
 
         }     
         private void readFromFile()
-        { 
+        {
             amount = file.ReadFromFile(dirOfAmount);
 
             vacuum.amount = amount[0];
             phone.amount = amount[1];
             headphone.amount = amount[2];
+
+            string line = file.ReadFromFileOrders(dirOfAmount);
+            Leadership.Text = line;
         }
     }
 }

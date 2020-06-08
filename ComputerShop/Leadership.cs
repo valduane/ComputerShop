@@ -8,5 +8,6 @@ namespace ComputerShop
 {
     class Leadership
     {
+
     }
 }

@@ -72,6 +72,12 @@
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
     <Compile Include="Leadership.cs" />
+    <Compile Include="LeadrshipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeadrshipForm.Designer.cs">
+      <DependentUpon>LeadrshipForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Order.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeadrshipForm.resx">
+      <DependentUpon>LeadrshipForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

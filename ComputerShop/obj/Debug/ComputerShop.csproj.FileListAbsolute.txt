@@ -12,3 +12,4 @@ D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Form2.resources
 D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Form3.resources
 D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.Cashier.resources
 D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.WarehouseEmployee.resources
+D:\ComputerShop\ComputerShop\ComputerShop\obj\Debug\ComputerShop.LeadrshipForm.resources

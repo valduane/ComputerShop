@@ -74,7 +74,20 @@ namespace ComputerShop
 
         private void dec_Click(object sender, EventArgs e)
         {
-
+            if (currentProduct == "vacuum")
+            {
+                vacuumProd.amount--;
+            }
+            else if (currentProduct == "phone")
+            {
+                phoneProd.amount--;
+            }
+            else if (currentProduct == "headphone")
+            {
+                headphoneProd.amount--;
+            }
+            textToWriteFile = vacuumProd.amount + " " + phoneProd.amount + " " + headphoneProd.amount;
+            file.SaveToFile(dir, textToWriteFile);
         }
     }
 }

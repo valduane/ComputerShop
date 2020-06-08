@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Drawing.Drawing2D;
 
 namespace ComputerShop
 {
@@ -19,7 +20,7 @@ namespace ComputerShop
                     sw.WriteLine(order.orderID);
                     sw.WriteLine(order.orderPrice);
                     sw.WriteLine(order.status);
-                    sw.WriteLine("\n");
+                    sw.WriteLine();
                 }
             }
             catch (Exception e)
@@ -47,7 +48,6 @@ namespace ComputerShop
         public int[] ReadFromFile(string dir)
         {
             string line = "";
-            int a = 0;
             int[] array = new int [3];
             try
             {
@@ -62,6 +62,24 @@ namespace ComputerShop
                 Console.WriteLine(e.Message);
             }
             return array;
+        }
+
+        public string ReadFromFileOrders(string dir)
+        {
+            string line = "1";
+
+            try
+            {
+                using (StreamReader sr = new StreamReader(dir))
+                {
+                    line = sr.ReadToEnd();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return line;
         }
     }
 }
